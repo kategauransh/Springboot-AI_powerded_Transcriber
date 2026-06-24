@@ -17,6 +17,8 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
+    - name: Grant execute permission to mvnw
+      run: chmod +x ./Audio-Transcriber/mvnw ./audio-transcribe/mvnw
     - name: Build Audio-Transcriber
       working-directory: ./Audio-Transcriber
       run: ./mvnw clean compile
